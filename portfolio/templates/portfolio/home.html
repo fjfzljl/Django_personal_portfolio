@@ -1,0 +1,15 @@
+<h1>Nick' Porfolio</h1>
+
+{% for project in projects %}
+    <h2>{{project.title}}</h2>
+    <p>{{project.description}}</p>
+    <img src="{{project.image.url}}", height="100" >
+
+    <p>
+        {% if project.url %}
+            <a href="{{project.url}}">Baidu Link</a>
+
+        {% endif %}
+    </p>
+
+{% endfor %}
